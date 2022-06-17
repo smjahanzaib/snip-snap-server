@@ -69,20 +69,28 @@ $ npm run test:cov
 ## Sample ENV
 
 ```
-APP_ID=********************
+APP_ID=
 PORT=9000
 LOG_LEVEL=debug
 REQUEST_LIMIT=100kb
-SESSION_SECRET=mySecret
+SESSION_SECRET=
 
-#JWT_SECRET_KEY
-JWT_SECRET=bezkoder-secret-key
+JWT_SECRET=
 
-#Database
-MONGODB_URI=mongodb://localhost/ecommers-sample
+#DATABASE
+MONGODB_URI_LOCAL=
+MONGODB_URI_DEV=
+MONGODB_URI_PRODUCTION=
+MONGODB_URI_STAGING=
 
-debug=true
-whitelist_url=******************
+debug= true
+whitelist_url=
+
+APP_HOST=
+
+SENDGRID_API_KEY=*****************
+APP_EMAIL_SENDER=*****************
+
 
 ```
 
