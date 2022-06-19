@@ -10,6 +10,7 @@ const { Types } = Schema;
 const UserSchema = new Schema<IUserModel<IUser>>({
 	firstName: { type: Types.String },
 	lastName: { type: Types.String },
+	fullName: { type: Types.String },
 	email: {
 		type: Types.String,
 		unique: true,
@@ -35,10 +36,10 @@ const UserSchema = new Schema<IUserModel<IUser>>({
 	provider: String,
 	salt: String,
 	phone: { type: Types.String },
-	address: { type: Types.String, requied: true },
-	city: { type: Types.String, requied: true },
-	country: { type: Types.String, requied: true },
-	postalCode: { type: Types.String, requied: true },
+	address: { type: Types.String },
+	city: { type: Types.String },
+	country: { type: Types.String },
+	postalCode: { type: Types.String },
 	profilePicture: { type: Types.String },
 	resetPasswordToken: String,
 	facebook: {},
