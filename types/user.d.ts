@@ -1,6 +1,11 @@
 import { Document, PaginateModel } from "mongoose";
 
+export enum Role {
+	admin = 'admin',
+	user = 'user'
+  }
 export interface IUser extends Document {
+	role: { type: Types.String, default: Role.user, enum: Role },
 	firstName: string;
 	lastName: string;
 	email: string;

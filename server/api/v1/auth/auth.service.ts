@@ -36,7 +36,8 @@ export class AuthService {
                     firstName: user.firstName,
                     lastName: user.lastName,
                     accessToken: token,
-                    date: user.date
+                    date: user.date,
+                    role: user.role
                 })
 
             }

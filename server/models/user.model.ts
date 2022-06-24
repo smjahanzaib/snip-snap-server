@@ -2,12 +2,16 @@ import { Schema, model } from "mongoose";
 import { IUser, IUserModel } from '../../types/user';
 import crypto from 'crypto';
 
-export const UserModelName = 'User';
 const authTypes = ['github', 'twitter', 'facebook', 'google'];
-
+export const UserModelName = 'User';
+export enum Role {
+	admin = 'admin',
+	user = 'user'
+  }
 const { Types } = Schema;
 
 const UserSchema = new Schema<IUserModel<IUser>>({
+	role: { type: Types.String, default: Role.user, enum: Role },
 	firstName: { type: Types.String },
 	lastName: { type: Types.String },
 	fullName: { type: Types.String },

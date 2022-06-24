@@ -9,6 +9,7 @@ export class UserService {
 		return User.find({});
 	}
 	async create(userData: IUser): Promise<IUser> {
+		console.log("====userdata==,", userData);
 		const userInstance = new User(userData);
 		return userInstance.save();
 	}
